@@ -1,11 +1,22 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link :to="{name:'About'}">About</router-link> |
+    <router-link :to="{name:'Jobs'}">Jobs</router-link>
   </div>
   <router-view/>
+  <Footer/>
 </template>
+<script>
+import Footer from './components/Footer'
 
+export default{
+  name:'App',
+  components:{
+    Footer
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
